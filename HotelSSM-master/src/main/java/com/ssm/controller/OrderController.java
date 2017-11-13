@@ -16,8 +16,6 @@ import com.ssm.service.OrderService;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: OrderController.java, v 0.1 2017年10月20日 下午3:54:29 Luxus_C Exp $
  */
 @Controller
 @RequestMapping("/order")

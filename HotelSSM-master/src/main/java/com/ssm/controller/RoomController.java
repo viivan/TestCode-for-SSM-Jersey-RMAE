@@ -15,8 +15,6 @@ import com.ssm.service.RoomService;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: RoomController.java, v 0.1 2017年10月20日 下午4:49:49 Luxus_C Exp $
  */
 @Controller
 @RequestMapping(value = "/room")

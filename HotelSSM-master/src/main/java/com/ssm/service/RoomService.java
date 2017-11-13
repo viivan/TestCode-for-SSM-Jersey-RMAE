@@ -6,8 +6,6 @@ import com.ssm.pojo.Room;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: IRoomService.java, v 0.1 2017年10月20日 下午8:46:50 Luxus_C Exp $
  */
 public interface RoomService {
 

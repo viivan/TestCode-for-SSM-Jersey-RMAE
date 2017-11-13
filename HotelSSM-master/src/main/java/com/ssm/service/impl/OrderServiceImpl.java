@@ -12,8 +12,6 @@ import com.ssm.service.OrderService;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: OrderService.java, v 0.1 2017年10月20日 下午8:47:03 Luxus_C Exp $
  */
 @Service("orderService")
 public class OrderServiceImpl implements OrderService {

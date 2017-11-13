@@ -12,8 +12,6 @@ import com.ssm.service.RoomService;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: RoomService.java, v 0.1 2017年10月20日 下午8:47:07 Luxus_C Exp $
  */
 @Service("roomService")
 public class RoomServiceImpl implements RoomService {

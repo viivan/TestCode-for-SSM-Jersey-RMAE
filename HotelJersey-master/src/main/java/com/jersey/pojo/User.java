@@ -1,4 +1,4 @@
-package com.ssm.pojo;
+package com.jersey.pojo;
 
 /**
  * 

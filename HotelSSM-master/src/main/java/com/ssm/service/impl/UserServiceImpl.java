@@ -10,8 +10,6 @@ import com.ssm.service.UserService;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: UserService.java, v 0.1 2017年10月20日 下午8:47:11 Luxus_C Exp $
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {

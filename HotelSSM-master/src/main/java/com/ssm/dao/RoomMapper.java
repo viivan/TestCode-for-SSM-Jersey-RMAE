@@ -6,8 +6,6 @@ import com.ssm.pojo.Room;
 
 /**
  * 
- * @author Luxus_C
- * @version $Id: RoomMapper.java, v 0.1 2017年10月20日 下午8:47:44 Luxus_C Exp $
  */
 public interface RoomMapper {
 
