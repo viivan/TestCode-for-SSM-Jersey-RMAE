@@ -1,8 +1,8 @@
 # TestCode-for-SSM-Jersey-RMAE
 
-HotelSSM为基于SSM框架实现的酒店在线预订系统
-HotelJersey基于Jersey框架实现的酒店在线预订系统
-HotelRMAE基于RMAE框架实现的酒店在线预订系统
+HotelSSM为基于SSM框架实现的酒店在线预订系统<br>
+HotelJersey基于Jersey框架实现的酒店在线预订系统<br>
+HotelRMAE基于RMAE框架实现的酒店在线预订系统<br>
 
 
 # HotelSSM
