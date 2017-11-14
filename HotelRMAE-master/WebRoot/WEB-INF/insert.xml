@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InsertElements>
+	<element key="add_order" URI="/order" method="PUT" description="添加订单" nextTag="update" nextKey="reduce_room_num">
+		<ms type="sql" value="insert into order values (null, ?, ?, ?, ?, ?, '未付款')" description="对order表进行新增操作">
+			<param session="true">user_id</param>
+			<param notNull="true">room_id</param>
+			<param notNull="true">book_num</param>
+			<param>guest</param>
+			<param>phone</param>
+		</ms>
+	</element>
+</InsertElements>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalConfig>
+	<dataSource>jdbc/TRS</dataSource>
+	<developMode>true</developMode>
+	<!-- 数据库操作日志，设置为时间点，day表示星期几，范围1-7，1表示星期天，留空表示每天都执行（只有day允许为空）；maxRecord为每个Excel记录的最大行数，不含标题-->
+	<databaseLog day="" hour="3" minute="0" second="0" maxRecord="1000"></databaseLog>
+	<!-- 性能监控日志，type取值为all on、off、正整数，分别表示全局监控、不监控、局部监控（概率为1/正整数）；写入时间设置同数据库操作日志-->
+	<monitor type="all on" day="" hour="2" minute="30" second="0" maxRecord="10000" isDatabase="true"></monitor>
+	<!-- 登录人数监听，设置为时间间隔 -->
+	<sessionListener hour="1" minute="0" second="0" isDatabase="true"></sessionListener>
+	<authorFilter>
+		<role userType="admin" roleDefault="adminLogin.html">
+			<permitURL name="admin">
+			</permitURL>
+			<permitURL name="ueditor">
+			</permitURL>
+		</role>
+		<role userType="teacher" roleDefault="teacherLogin.html">
+			<permitURL name="teacher">
+			</permitURL>
+		</role>
+		<role userType="college" roleDefault="collegeLogin.html">
+			<permitURL name="college">
+			</permitURL>
+		</role>
+	</authorFilter>
+</GlobalConfig>

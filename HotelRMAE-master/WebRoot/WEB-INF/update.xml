@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UpdateElements>
+	<element key="reduce_room_num" URI="/room/reduceNum" method="POST" description="预订后更新房间状态" nextTag="browse" nextKey="cal_price_diff">
+		<ms type="sql" value="update room set left_num = left_num - ? where type = ?"  description="特定类型的房间剩余数量相应减少">
+			<param notNull="true">book_num</param>
+			<param notNull="true">room_type</param>
+		</ms>
+	</element>
+	<element key="add_room_num" URI="/room/addNum" method="POST" description="退订后更新房间状态" nextTag="insert" nextKey="add_order">
+		<ms type="sql" value="update room set left_num = left_num + ? where type = ?" description="特定类型的房间剩余数量相应增加">
+			<param notNull="true">book_num</param>
+			<param notNull="true">room_type</param>
+		</ms>
+	</element>
+	<element key="pay_order" URI="/pay/{id}" method="POST" description="付款后更新订单状态">
+		<ms type="sql" value="update `order` set states = '已付款' where id = ?" description="订单状态改为已付款">
+			<param notNull="true">id</param>
+		</ms>
+	</element>
+</UpdateElements>

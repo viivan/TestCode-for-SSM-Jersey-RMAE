@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeleteElements>
+	<element key="delete_order" URI="/order/{id}" method="DELETE" description="删除订单" nextTag="update" nextKey="add_room_num">
+		<ms type="sql" value="delete from order where id = ?" description="对order表进行删除操作">
+			<param notNull="true">id</param>
+		</ms>
+	</element>
+</DeleteElements>

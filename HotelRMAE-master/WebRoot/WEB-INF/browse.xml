@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BrowseElements>
+	<element key="cal_price_diff" URI="/room/calPrice" method="GET" description="计算差价">
+		<ms type="sql" value="select ( select price from room where type = ? ) - ( select price from room where type = ? )" description="计算两个不同房间的价格差">
+			<param notNull="true">room_type</param>
+			<param notNull="true">old_room_type</param>
+		</ms>
+	</element>
+	<element key="room_status" URI="/room" method="GET" description="查询所有房间状态">
+		<ms type="sql" value="select * from room" description="对room表进行查询操作" />
+	</element>
+	<element key="user_orders" URI="/order/user/{user_id}" method="GET" description="查询某用户的所有订单">
+		<ms type="sql" value="select * from `order` where user_id = ?">
+			<param notNull="true">user_id</param>
+		</ms>
+	</element>
+</BrowseElements>

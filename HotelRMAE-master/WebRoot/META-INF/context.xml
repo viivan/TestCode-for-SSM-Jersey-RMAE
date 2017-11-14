@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Context reloadable="true">
+	<Resource
+	  name="jdbc/TRS"
+      auth="Container"
+      type="javax.sql.DataSource"
+      factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+      defaultAutoCommit="true"
+      testWhileIdle="true"
+      testOnBorrow="true"
+      testOnReturn="false"
+      validationQuery="SELECT 1"
+      validationInterval="30000"
+      timeBetweenEvictionRunsMillis="30000"
+      maxActive="100"
+      minIdle="30"
+      maxWait="10000"
+      initialSize="10"
+      removeAbandonedTimeout="60"
+      removeAbandoned="true"
+      logAbandoned="true"
+      minEvictableIdleTimeMillis="30000"
+      jmxEnabled="true"
+      jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+      org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+      username="test_user"
+      password="common_password"
+      driverClassName="net.sf.log4jdbc.DriverSpy"
+      url="jdbc:log4jdbc:mysql://localhost:3306/teachertraining?characterEncoding=utf-8"/>
+      <!-- 121.40.77.240 -->
+
+<!-- defaultAutoCommit（布尔值）必须设置为true，否则mysql数据不会自动提交-->
+<!-- testWhileIdle（布尔值）对象是否将被验证的指示。如果对象不能验证，它将被从池中删除。 -->
+<!-- testOnBorrow （布尔）对象是否会从池中被借用验证之前的指示。如果对象无法验证，它会从池中删除，然后借用其他的对象。-->
+<!-- testOnReturn （布尔值）对象是否将被返回到池中之前进行验证的指示。 -->
+<!-- validationQuery （字符串），将用于其返回给调用者之前验证从这个池中的连接的SQL查询。如果指定了此查询没有返回任何数据，
+它只是不能抛出SQLException。默认值为null。示例值有SELECT 1 (mysql)， select 1 from dual (oracle), SELECT 1 (MS Sql Server)-->
+<!-- validationInterval  (long) 避免过度验证，保证验证不超过这个频率——以毫秒为单位。如果一个连接应该被验证，
+但上次验证未达到指定间隔，将不再次验证。默认值是30000 （30 秒）。 -->
+<!-- timeBetweenEvictionRunsMillis  （INT）的毫秒数的空闲连接的验证/清洁线程运行之间睡觉。此值应不小于1秒进行设置。
+它决定了我们如何经常检查空闲，废弃的连接，以及多久，我们验证空闲连接。默认值是5000（5秒）。 -->
+<!-- maxActive  （int），可以从该池中被分配在同一时间活动的连接的最大数量。默认值是100 -->
+<!-- minIdle   （int）的已建立的连接，应该维持在池中在所有时间的最小数目。低于这个数字的连接池可以收缩，
+如果确认查询失败。默认值是从INITIALSIZE得出：10（另见testWhileIdle）-->
+<!-- maxWait   （INT）毫秒池将等待（如果没有可用的连接）的连接的最大数目，以抛出异常前归还。默认值是30000（30秒）-->
+<!-- initialSize  （int），其池启动时创建的连接的初始数量。默认值是10 -->
+<!-- removeAbandonedTimeout  （INT）超时（秒）之前，一个废弃的（在使用中）的连接可以被删除。默认值是60（60秒）。
+该值应设置为运行时间最长的查询您的应用程序可能。 -->
+<!-- removeAbandoned   （布尔）标记，以去除废弃的连接，如果他们超过removeAbandonedTimout。如果设置为true的连接被视为放弃资格，并去除如果已
+使用时间超过removeAbandonedTimeout设置为true可以从无法关闭连接的应用程序恢复数据库的连接。另请参阅logAbandoned的默认值是false。-->
+<!-- logAbandoned   （布尔）标记，以记录为其放弃了连接的应用程序代码的堆栈跟踪。被遗弃的连接的记录增加了开销，为每个连接借，
+因为一个堆栈跟踪，必须产生。默认值是false。-->
+<!-- minEvictableIdleTimeMillis  （INT）的时候一个对象可以闲坐在游泳池之前，可享有驱逐的最低金额。默认值是60000（60秒）。 -->
+<!-- jmxEnabled （布尔）注册使用JMX或者没有游泳池。默认值是true。-->
+<!-- jdbcInterceptors -->
+<!-- username 数据库登录名-->
+<!-- password 数据库密码-->
+<!-- driverClassName 驱动名称-->
+<!-- url 连接数据库的url-->
+	<Resource
+         name="jdbc/UTADB"
+         auth="Container"
+         type="javax.sql.DataSource"
+         maxTotal="8"
+         maxIdle="2"
+         maxWaitMillis="10000"
+         username="test_user"
+         password="common_password"
+         driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		 url="jdbc:sqlserver://210.32.200.119:1433;DatebaseName=UTADB" 
+		 removeAbandonedOnBorrow="true"
+		 removeAbandonedTimeout="60"
+		 logAbandoned="true"
+	/>
+</Context>
